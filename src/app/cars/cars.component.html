@@ -1,3 +1,17 @@
-<h2>{{ car.name }} Details</h2>
-<div><span>id: </span>{{car.id}}</div>
-<div><span>name: </span>{{car.name}}</div>
+<div>
+<h2>My Cars</h2>
+
+<app-car-detail [car]="selectedCar"></app-car-detail>
+
+<div class="cars">
+<ul >
+  <li *ngFor="let car of cars"
+    [class.selected]="car === selectedCar"
+    (click)="onSelect(car)">
+    {{car.name}}
+  </li>
+</ul>
+</div>
+
+
+  <div>

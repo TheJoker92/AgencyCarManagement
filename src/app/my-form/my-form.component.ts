@@ -1,0 +1,29 @@
+
+
+import { Component, OnInit } from '@angular/core';
+import { Address } from '../address';
+import fs = require('fs');
+@Component({
+  selector: 'my-form',
+  templateUrl: './my-form.component.html',
+  styleUrls: ['./my-form.component.css']
+})
+export class MyFormComponent implements OnInit {
+
+
+
+  address = new Address();
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  onSubmit(){
+  alert("Thank you for submitting! Data:" + JSON.stringify(this.address));
+
+  }
+
+  
+
+}

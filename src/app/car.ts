@@ -1,4 +1,7 @@
-export class Hero {
-  id: number;
-  name: string;
+export class Car {
+	id: number;
+	name: string;
+	year: number;
+	fuel: string;
+	price: number;
 }
